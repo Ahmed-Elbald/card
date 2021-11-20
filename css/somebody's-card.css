@@ -1,0 +1,188 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Cairo', sans-serif;
+}
+i {
+    cursor: pointer;
+}
+:root {
+    --iden: #2eca7f;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont {
+    border-radius: 4px;
+    padding: 10px;
+}
+header {
+    background-color: var(--iden);
+    padding: 15px;
+    color: white;
+}
+.picture {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header .picture img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+header .picture p {
+    margin-top: -15px;
+}
+.social p {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+header .social > div > div {
+    margin: 5px 15px 0 0;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--iden);
+    padding: 10px;
+}
+@media (min-width:800px) {
+    header,
+    .picture,
+    header .social > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    } 
+    .content {
+        display: grid;
+        grid-template-columns: 14% 35% 50%;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    nav ul {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around !important;
+    }
+}
+nav ul {
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px;
+    gap: 2px 5px;
+}
+nav ul li {
+    transition-duration: .3s;
+    cursor: pointer;
+}
+nav ul li:hover {
+    color: var(--iden);
+}
+nav ul li i {
+    color: var(--iden);
+}
+.image {
+    background-image: url(../images/person.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 300px;
+}
+@media (min-width: 500px) and (max-width: 800px) {
+    .image {
+        background-size: 70% 100%;
+        background-position-x: center;
+    }
+}
+section > h1 {
+    text-align: center;
+    padding: 15px 0 5px;
+}
+section > h1::before,
+section > h1::after {
+    content: "";
+    position: absolute;
+}
+section > h1::before {
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--iden);
+    opacity: .5;
+    bottom: 7px;
+    left: 50%; 
+    transform: translate(-50%,0);
+}
+section > h1::after {
+    width: 40px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: var(--iden);
+    left: calc(50% - 50px);
+    bottom: 6px;
+    box-shadow: 1px 1px 5px 1px var(--iden);
+}
+.gray {
+    color: gray;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    transition-duration: .2s;
+}
+.gray:hover {
+    color: var(--iden);
+}
+section > div.minutiae {
+    font-weight: 600;
+    margin: 20px 0;
+}
+@media (min-width: 500px) and (max-width: 800px) {
+    section > div.minutiae {
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        justify-content: space-between;
+    }
+}
+section > button {
+    background-color: var(--iden);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+@media (min-width:800px) {
+    section > button {
+        margin-left: 0;
+    }
+}
+section > button > div.i {
+    border-radius: 50%;
+    padding: 0 4px;
+    color: var(--iden);
+    margin-right: 5px;
+    background-color: white;
+    text-align: center;
+}
+section > button a {
+    color: inherit;
+}
